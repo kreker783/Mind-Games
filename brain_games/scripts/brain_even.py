@@ -3,7 +3,6 @@ import brain_games.cli as cli
 
 
 def main():
-    # first_number, second_number, third_number = sample(range(1, 101), 3)
     cli.welcome_user()
 
     count = 0
