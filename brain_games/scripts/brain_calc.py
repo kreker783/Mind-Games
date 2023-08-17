@@ -14,27 +14,33 @@ def main():
         cli.game_ending()
 
 
-def calc_game():
+def game():
     count = 0
     while count < 3:
         first_number, second_number = sample(range(1, 100), 2)
         operation = choice([add, sub, mul])
         result = operation(first_number, second_number)
 
-        if operation == add:
-            expr = f"{first_number} + {second_number}"
-        elif operation == sub:
-            expr = f"{first_number} - {second_number}"
-        else:
-            expr = f"{first_number} * {second_number}"
+        expression = get_expression(first_number, second_number, operation)
 
-        validation = logic.validate(result, logic.get_answer(expr))
+        validation = logic.validate(result, logic.get_answer(expression))
 
         if validation:
             count += 1
         else:
             return False
     return True
+
+
+def get_expression(first_number, second_number, op):
+    if op == add:
+        expr = f"{first_number} + {second_number}"
+    elif op == sub:
+        expr = f"{first_number} - {second_number}"
+    else:
+        expr = f"{first_number} * {second_number}"
+
+    return expr
 
 
 if __name__ == "__main__":
