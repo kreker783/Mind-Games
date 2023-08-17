@@ -9,7 +9,9 @@ def game():
         first_number, second_number = sample(range(1, 100), 2)
         result = get_result(first_number, second_number)
 
-        validation = logic.validate(result, logic.get_answer(str(f"{first_number} {second_number}")))
+        answer = logic.get_answer(str(f"{first_number} {second_number}"))
+
+        validation = logic.validate(result, answer)
 
         if validation:
             count += 1

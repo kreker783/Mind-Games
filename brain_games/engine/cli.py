@@ -12,3 +12,12 @@ def welcome_user():
 
 def game_ending():
     print(f"Congratulations, {name}!")
+
+
+def game_process(message, game):
+    welcome_user()
+
+    print(message)
+
+    if game():
+        game_ending()

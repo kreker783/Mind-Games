@@ -1,5 +1,4 @@
 from random import randint
-from math import gcd
 import brain_games.engine.logic as logic
 
 

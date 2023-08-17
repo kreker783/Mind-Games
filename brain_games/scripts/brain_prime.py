@@ -1,14 +1,9 @@
-import brain_games.engine.cli as cli
+from brain_games.engine.cli import game_process
 from brain_games.games.prime import game
 
 
 def main():
-    cli.welcome_user()
-
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-
-    if game():
-        cli.game_ending()
+    game_process('Answer "yes" if given number is prime. Otherwise answer "no".', game)
 
 
 if __name__ == "__main__":
