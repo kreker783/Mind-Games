@@ -1,4 +1,4 @@
-import random
+from random import sample, choice
 from operator import add, mul, sub
 import brain_games.cli as cli
 import brain_games.logic as logic
@@ -17,8 +17,8 @@ def main():
 def game():
     count = 0
     while count < 3:
-        first_number, second_number = random.sample(range(1, 100), 2)
-        operation = random.choice([add, sub, mul])
+        first_number, second_number = sample(range(1, 100), 2)
+        operation = choice([add, sub, mul])
         result = operation(first_number, second_number)
 
         if operation == add:
