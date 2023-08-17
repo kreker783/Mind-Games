@@ -14,7 +14,7 @@ def main():
         cli.game_ending()
 
 
-def game():
+def calc_game():
     count = 0
     while count < 3:
         first_number, second_number = sample(range(1, 100), 2)

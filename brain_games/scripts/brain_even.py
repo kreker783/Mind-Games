@@ -13,7 +13,7 @@ def main():
         cli.game_ending()
 
 
-def game():
+def even_game():
     count = 0
     while count < 3:
         number = randint(1, 100)
