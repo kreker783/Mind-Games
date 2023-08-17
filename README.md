@@ -12,3 +12,7 @@ https://asciinema.org/a/603219
 
 Brain-gcd game demo:
 https://asciinema.org/a/vTc4NUpUrk6MkNlvmPYr3Plsb
+
+
+Brain-progression game demo:
+https://asciinema.org/a/BiSEzXpmWTiZzuhhAyjZmTXkj
