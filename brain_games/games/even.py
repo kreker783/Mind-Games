@@ -1,6 +1,6 @@
 from random import randint
-import brain_games.cli as cli
-import brain_games.logic as logic
+import brain_games.engine.cli as cli
+import brain_games.engine.logic as logic
 
 
 def main():

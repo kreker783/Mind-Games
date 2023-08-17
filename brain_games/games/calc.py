@@ -1,7 +1,7 @@
 from random import sample, choice
 from operator import add, mul, sub
-import brain_games.cli as cli
-import brain_games.logic as logic
+import brain_games.engine.cli as cli
+import brain_games.engine.logic as logic
 
 
 def main():
