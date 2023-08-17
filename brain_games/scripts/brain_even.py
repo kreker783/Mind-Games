@@ -1,27 +1,31 @@
 from random import randint
 import brain_games.cli as cli
+import brain_games.logic as logic
 
 
 def main():
     cli.welcome_user()
 
-    count = 0
-
     print('Answer "yes" if the number is even, otherwise answer "no".')
+    game_result = game()
+
+    if game_result:
+        cli.game_ending()
+
+
+def game():
+    count = 0
     while count < 3:
         number = randint(1, 100)
         result = "yes" if number % 2 == 0 else "no"
 
-        print(f"Question: {number}")
-        guess = input("Your answer: ")
+        validation = logic.validate(result, logic.get_answer(number))
 
-        if guess != result:
-            return print(f"{guess} is wrong answer ;(. Correct answer was {result}.")
-        else:
+        if validation:
             count += 1
-            print("Correct!")
-
-    print(f"Congratulations, {cli.name}!")
+        else:
+            return False
+    return True
 
 
 if __name__ == "__main__":
