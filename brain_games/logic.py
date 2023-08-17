@@ -10,4 +10,8 @@ def validate(result, answer):
 def get_answer(question):
     print(f"Question: {question}")
     answer = input("Your answer: ")
+
+    if answer.isdigit():
+        answer = int(answer)
+
     return answer
