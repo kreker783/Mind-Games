@@ -1,17 +1,6 @@
 from random import sample, choice
 from operator import add, mul, sub
-import brain_games.engine.cli as cli
 import brain_games.engine.logic as logic
-
-
-def main():
-    cli.welcome_user()
-
-    print('What is the result of the expression?')
-    game_result = game()
-
-    if game_result:
-        cli.game_ending()
 
 
 def game():
@@ -41,7 +30,3 @@ def get_expression(first_number, second_number, op):
         expr = f"{first_number} * {second_number}"
 
     return expr
-
-
-if __name__ == "__main__":
-    main()
